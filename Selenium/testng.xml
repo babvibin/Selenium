@@ -1,11 +1,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"> 
 <suite name="MyDemoSuite" > 
+<!-- 
 <groups>
  	<run> 
 		<include name="smoke" />
 	</run> 
 </groups>
-	
+-->	
 	<test name="JavaScriptAlerts"> 
 		<parameter name="browser" value="firefox"/>
 		<classes> 

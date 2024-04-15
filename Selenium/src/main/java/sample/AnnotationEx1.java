@@ -10,6 +10,12 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.aventstack.extentreports.Status;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
@@ -95,6 +101,11 @@ public class AnnotationEx1
 	public void samplePrintout(String key,String value)
 	{ 
 	System.out.println("Key=" + key +" , "+ "value="+value ); 
+	ExtentReports extentReports = generateReports() ;
+    ExtentTest extenTest =extentReports .createTest("myTestMethod5");
+    extenTest.log(Status.INFO,"entering test");
+    extenTest.log(Status.PASS,"test passed");
+    extentReports.flush();
 	} 
 	@DataProvider(name="sample") 
 	public Object[][] sampleKeyValuePair()
@@ -105,5 +116,29 @@ public class AnnotationEx1
 	{"y","2"} 
 	} ; 
 	
+	
 	}
+	
+	public ExtentReports generateReports(){
+	    String reportPath = System.getProperty("user.dir") + "/test-output/ExtentReport.html";
+	    ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(reportPath);
+	    htmlReporter.config().setDocumentTitle("Automation Report");
+	    htmlReporter.config().setReportName("Test Automation Results");
+	    htmlReporter.config().setTheme(Theme.STANDARD);
+	    ExtentReports extentReports= new ExtentReports();
+	    extentReports.attachReporter(htmlReporter);
+	    return extentReports;
+	}
+	public  void myTestMethod5(String p){
+		ExtentReports extentReports = generateReports() ;
+	    ExtentTest extenTest =extentReports .createTest("myTestMethod5");
+	    extenTest.log(Status.INFO,"entering test");
+	    System.out.println(p);
+	    extenTest.log(Status.PASS,"test passed");
+	    extentReports.flush();
+	}
+
+	
+	
+	
 }
