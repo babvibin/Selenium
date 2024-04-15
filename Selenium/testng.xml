@@ -11,7 +11,7 @@
 		<classes> 
 			<class name="sample.AnnotationEx1"> 
 				<methods>
-				<include name="testingA"/>
+				<include name="samplePrintout"/>
 				<exclude name="testingC"/>
 				</methods>			
 			</class>

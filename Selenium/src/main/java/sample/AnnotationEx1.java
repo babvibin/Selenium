@@ -25,11 +25,11 @@ public class AnnotationEx1
 		driver.get("https://en.wikipedia.org/");
 		String pageTitle=driver.getTitle();
 		System.out.println(pageTitle);
-		Assert.assertEquals(pageTitle, "Wikipedia, the free encyclopediaa");
+		Assert.assertEquals(pageTitle, "Wikipedia, the free encyclopedia");
 		System.out.println("Hard Assert: Executions stops when a Hard Assert Fails. Page title is compared & it is correct");	
 		
 		SoftAssert softAssert = new SoftAssert(); 
-		softAssert.assertEquals(pageTitle, "Wikipedia, the free encyclopediaa");
+		softAssert.assertEquals(pageTitle, "Wikipedia, the free encyclopedia");
 		System.out.println("Soft Assert: Executions continues even  when a Soft Assert Fails. Page title is compared & it is wrong");
 		driver.quit();
 			
