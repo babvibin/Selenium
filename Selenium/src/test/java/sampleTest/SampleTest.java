@@ -20,7 +20,7 @@ public class SampleTest {
 	@BeforeTest
 	public void setup()
 	{
-	//	System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/main/resources/chromedriver.exe");
+	//	System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/main/resources/chromedriver.exe");		
 		System.setProperty("webdriver.chrome.driver", "C:\\Selenium_Drivers\\chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.get(URL);
