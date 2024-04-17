@@ -10,9 +10,9 @@ public class Page1 {
 
 	WebDriver driver;
 	public void page1(WebDriver driver) {
-		// TODO Auto-generated method stub
 		this.driver=driver;
 	}
+	
 	By homeLINK=By.xpath("//div[@id='collapsibleNavbar']/child::ul[@class='navbar-nav']/child::li[@class='nav-item active']/a");
 	By inputFormLINK=By.xpath("//div[@id='collapsibleNavbar']/child::ul[@class='navbar-nav']/child::li[@class='nav-item'][1]/a");
 	By datePickersLINK=By.xpath("//div[@id='collapsibleNavbar']/child::ul[@class='navbar-nav']/child::li[@class='nav-item'][2]/a");
@@ -31,4 +31,33 @@ public class Page1 {
 		driver.findElement(inputFormLINK).click();
 	}
 	
+	public void clickDatePickers()
+	{
+	driver.findElement(datePickersLINK).click();	
+	}
+
+	public void clickTable()
+	{
+		driver.findElement(tableLINK).click();
+	}
+	
+	public void clickProgressBar()
+	{
+		driver.findElement(progressBarsLINK).click();
+	}
+	
+	public void clickAlertsAndModals()
+	{
+		driver.findElement(alertsAndModalsLINK).click();
+	}
+	
+	public void clickListBox()
+	{
+		driver.findElement(listBoxLINK).click();
+	}
+	
+	public void clickOthers()
+	{
+		driver.findElement(othersLINK).click();
+	}
 }
