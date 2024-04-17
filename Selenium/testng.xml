@@ -8,14 +8,10 @@
 </groups>
 -->	
 	<test name="JavaScriptAlerts"> 
-		<parameter name="browser" value="firefox"/>
 		<classes> 
-			<class name="sample.AnnotationEx1"> 
-				<methods>
-				<include name="samplePrintout"/>
-				<exclude name="testingC"/>
-				</methods>			
-			</class>
+			<class name="page.HomePage"/>
+			<class name="page.InputForm"/>
+			<class name="page.InputFormDetails"/>
 		</classes> 
 	</test> 
 </suite>
