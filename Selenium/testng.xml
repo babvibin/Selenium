@@ -9,9 +9,8 @@
 -->	
 	<test name="JavaScriptAlerts"> 
 		<classes> 
-			<class name="page.HomePage"/>
-			<class name="page.InputForm"/>
-			<class name="page.InputFormDetails"/>
+			<class name="sampleTest.SampleTest">
+			</class>
 		</classes> 
 	</test> 
 </suite>

@@ -35,7 +35,7 @@ public class AnnotationEx1
 		System.out.println("Hard Assert: Executions stops when a Hard Assert Fails. Page title is compared & it is correct");	
 		
 		SoftAssert softAssert = new SoftAssert(); 
-		softAssert.assertEquals(pageTitle, "Wikipedia, the free encyclopedia");
+		softAssert.assertEquals(pageTitle, "Wikipedia, the free encyclopediaa");
 		System.out.println("Soft Assert: Executions continues even  when a Soft Assert Fails. Page title is compared & it is wrong");
 		driver.quit();
 			
