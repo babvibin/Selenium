@@ -9,7 +9,7 @@
 -->	
 	<test name="JavaScriptAlerts"> 
 		<classes> 
-			<class name="sampleTest.SampleTest">
+			<class name="sampleTest.SampleTestPageFactory">
 			</class>
 		</classes> 
 	</test> 

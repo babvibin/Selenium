@@ -138,7 +138,7 @@ public class AnnotationEx1
 	    extentReports.flush();
 	}
 
-	
+
 	
 	
 }
